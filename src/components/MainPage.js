@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Topbar from './TopBar';
 import Options from './Options';
 import Flights from './Flights';
+import Map from './Map';
 
 export default class MainPage extends Component {
     render() {
@@ -21,7 +22,7 @@ export default class MainPage extends Component {
                             </div>
                         </div>
                         <div className="col-6">
-
+                            <Map />
                         </div>
                     </div>
                 </div>
