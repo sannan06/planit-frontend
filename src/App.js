@@ -6,10 +6,9 @@ import MainPage from  './components/MainPage';
 function App() {
   return (
     <React.Fragment>
-        {/* <div id="landing-page-component">
-            <LandingPage/>
-        </div> */}
-        <MainPage />
+        { <div id="landing-page-component">
+            <LandingPage />
+        </div>}
     </React.Fragment>
   );
 }
