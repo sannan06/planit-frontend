@@ -24,6 +24,7 @@ class App extends React.Component {
             }  
             </Spring> 
             
+            { !this.state.showLanding ?  
             <Spring
             from={{opacity:0}}
             to={{opacity:(!this.state.showLanding ? 1 : 0) }}>
@@ -33,6 +34,7 @@ class App extends React.Component {
                 </div>
             }
             </Spring>
+            : null }
             
         </React.Fragment>
     );
