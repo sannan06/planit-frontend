@@ -9,17 +9,16 @@ import MenuItem from '@material-ui/core/MenuItem';
 import PropTypes from 'prop-types';
 
 const suggestions = [
-    { label: 'Afghanistan' },
-    { label: 'Aland Islands' },
-    { label: 'Albania' },
-    { label: 'Algeria' },
-    { label: 'American Samoa' },
-    { label: 'Andorra' },
-    { label: 'Angola' },
-    { label: 'Anguilla' },
-    { label: 'Antarctica' },
-    { label: 'Antigua and Barbuda' },
-    { label: 'Argentina' },
+    { label: 'Abu Dhabi' },
+    { label: 'Auckland' },
+    { label: 'Bangalore' },
+    { label: 'Bangkok' },
+    { label: 'Berlin' },
+    { label: 'Brisbane' },
+    { label: 'Cairo' },
+    { label: 'Cologne' },
+    { label: 'Cologne' },
+    { label: 'Delhi' },
     { label: 'Armenia' },
     { label: 'Aruba' },
     { label: 'Australia' },
@@ -51,7 +50,7 @@ const suggestions = [
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
-        height: 250,
+        height: 100,
     },
     input: {
         display: 'flex',
@@ -272,7 +271,7 @@ export default function IntegrationReactSelect() {
                     styles={selectStyles}
                     inputId="react-select-single"
                     TextFieldProps={{
-                        label: 'Country',
+                        label: 'Flying From',
                         InputLabelProps: {
                             htmlFor: 'react-select-single',
                             shrink: true,

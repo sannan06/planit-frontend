@@ -16,6 +16,7 @@
     font-size: 1.5rem;
 }
 
-#topbar-logo {
-    
+.search-card {
+    width: 70vw;
+    margin: 0 auto;
 }
