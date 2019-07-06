@@ -5,6 +5,7 @@ import Flights from './Flights';
 import Map from './Map';
 import MainTrans from './MainTrans';
 import Attractions from './Attractions';
+import Transportation from './Transportation';
 import BackIcon from '@material-ui/icons/ArrowBack';
 import { IconButton } from '@material-ui/core';
 
@@ -36,6 +37,7 @@ export default class MainPage extends Component {
                                 <div className="col-9">
                                     {this.state.selectedIndex === 1 ? <MainTrans /> : null}
                                     {this.state.selectedIndex === 2 ? <Attractions /> : null}
+                                    {this.state.selectedIndex === 3 ? <Transportation /> : null}
                                 </div>
                             </div>
                         </div>
