@@ -16,6 +16,7 @@ export default class MainPage extends Component {
     state = {
         selectedIndex: 1,
         count: 0, 
+        hotelCount: 0,
         markerList: [],
         hotelMarkerList: []
     }
@@ -75,9 +76,9 @@ export default class MainPage extends Component {
         }
 
         if(!existFlag) {
-            oldMarkerList = oldMarkerList.concat({lat: lat, lng: lng, id: this.state.count + 1, place: event})
+            oldMarkerList = oldMarkerList.concat({lat: lat, lng: lng, id: this.state.hotelCount + 1, place: event})
             this.setState( {
-                count: this.state.count + 1,
+                hotelCount: this.state.hotelCount + 1,
                 hotelMarkerList: oldMarkerList
             })
             console.log(oldMarkerList);
@@ -96,7 +97,7 @@ export default class MainPage extends Component {
             k++;
         }
         this.setState( {
-            count: oldMarkerList.length,
+            hotelCount: oldMarkerList.length,
             hotelMarkerList: oldMarkerList
 
         })
@@ -133,7 +134,7 @@ export default class MainPage extends Component {
                             </div>
                         </div>
                         <div className="col-5">
-                            <Map markerList = {this.state.markerList} hotelMarkerList = {this.state.hotelMarkerList} count = {this.state.count} removeAttraction = {this.removeAttraction} removeHotel = {this.removeHotel}/>
+                            <Map markerList = {this.state.markerList} hotelMarkerList = {this.state.hotelMarkerList} count = {this.state.count} hotelCount = {this.state.hotelCount} removeAttraction = {this.removeAttraction} removeHotel = {this.removeHotel}/>
                         </div>
                     </div>
                 </div>

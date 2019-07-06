@@ -57,13 +57,14 @@ const HotelMarker = ({ text }) =>
 class Map extends Component {
     constructor(props) {
         super(props);
-        this.state = {count: 0, markerList: [], hotelMarkerList: []}
+        this.state = {count: 0, hotelCount: 0, markerList: [], hotelMarkerList: []}
         
     }
 
     componentWillReceiveProps(newProps) {
         console.log(this.props.count, this.props.markerList)
         this.setState( {
+            hotelCount: newProps.hotelCount,
             count: newProps.count,
             markerList: newProps.markerList,
             hotelMarkerList: newProps.hotelMarkerList
@@ -140,7 +141,7 @@ class Map extends Component {
              <Button key = {i} onClick = { () => {this._removeMarker(i)}}> Remove {item.place} </Button>
          ))}
         <GoogleMapReact
-         bootstrapURLKeys={ {key: "AIzaSyCpZncD-kIG2qDFOd8psiKydi44wLApEf4" }}
+         bootstrapURLKeys={ {key: "AIzaSyAQo5ASGzT4OvIocaKUDJwUlLaVtcitHaQ" }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
           //onClick = {this._onClick}
