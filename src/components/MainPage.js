@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Topbar from './TopBar';
 import Options from './Options';
+import Flights from './Flights';
+import Map from './Map';
 import MainTrans from './MainTrans';
 import Attractions from './Attractions';
 import BackIcon from '@material-ui/icons/ArrowBack';
