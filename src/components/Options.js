@@ -32,9 +32,11 @@ export default class Options extends Component {
                 break;
             case('acc'):
                 this.setState({selectedButton:4});
+                this.props.setIndex(4);
                 break;
             case('summ'):
                 this.setState({selectedButton:5});
+                this.props.setIndex(5);
                 break;             
             default:
                 this.setState({selectedButton:null});

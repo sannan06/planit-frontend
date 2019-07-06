@@ -42,6 +42,9 @@ const suggestions = [
     { label: 'Brazil' },
     { label: 'British Indian Ocean Territory' },
     { label: 'Brunei Darussalam' },
+    { label: 'Paris' },
+    { label: 'Marseille' },
+    { label: 'Lyon' }
 ].map(suggestion => ({
     value: suggestion.label,
     label: suggestion.label,
@@ -50,7 +53,7 @@ const suggestions = [
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
-        height: 100,
+        height: 70,
     },
     input: {
         display: 'flex',
@@ -266,23 +269,33 @@ export default function IntegrationReactSelect() {
     return (
         <div className={classes.root}>
             <NoSsr>
-                <Select
-                    classes={classes}
-                    styles={selectStyles}
-                    inputId="react-select-single"
-                    TextFieldProps={{
-                        label: 'Flying From',
-                        InputLabelProps: {
-                            htmlFor: 'react-select-single',
-                            shrink: true,
-                        },
-                        placeholder: 'Search a country (start with a)',
-                    }}
-                    options={suggestions}
-                    components={components}
-                    value={single}
-                    onChange={handleChangeSingle}
-                />
+                <div className="row">
+                    <div className="col-9">
+                        <Select
+                            classes={classes}
+                            styles={selectStyles}
+                            inputId="react-select-single"
+                            TextFieldProps={{
+                                label: 'Add City',
+                                InputLabelProps: {
+                                    htmlFor: 'react-select-single',
+                                    shrink: true,
+                                },
+                                placeholder: 'Search a country (start with a)',
+                            }}
+                            options={suggestions}
+                            components={components}
+                            value={single}
+                            onChange={handleChangeSingle}
+                        />
+                    </div>
+                    <div className="col-3">
+                        <TextField
+                        required
+                        label="Days"
+                        />
+                    </div>
+                </div>
             </NoSsr>
         </div>
     );

@@ -11,6 +11,7 @@ class App extends React.Component {
     render() {
     return (
         <React.Fragment>
+            
             {this.state.showLanding ? 
             <div id="landing-page-component">
                 <LandingPage goNext={this.goNext}/>
