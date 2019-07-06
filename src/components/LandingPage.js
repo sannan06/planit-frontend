@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import justtext from '../images/justtext.png';
-import Select from 'react-select';
 import SearchBar from './SearchBar'
-
-const options = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' },
-];
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 
 export default class LandingPage extends Component {
     state = {
@@ -27,8 +23,13 @@ export default class LandingPage extends Component {
                 <div className="row justify-content-center" style={{paddingTop:'2vh', overflow:'hidden'}}>
                     <p id="byline">Plan your trip quicker, easier, and smarter</p>
                 </div>
-                <SearchBar/>
-                <button onClick={this.props.goNext}>go next!!!</button>
+                <Card className="search-card">
+                    <CardContent>
+                        <SearchBar />
+                        <SearchBar />
+                    </CardContent>
+                </Card>
+                
             </React.Fragment>
         )
     }

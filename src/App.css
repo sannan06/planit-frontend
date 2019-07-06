@@ -63,3 +63,8 @@
     position: absolute !important;
     bottom: 0;
 }
+
+.search-card {
+    width: 70vw;
+    margin: 0 auto;
+}
