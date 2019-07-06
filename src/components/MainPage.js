@@ -8,6 +8,7 @@ import Transportation from './Transportation';
 import Summary from './Summary';
 import Hotels from './Hotels'
 import Itinerary from './Itinerary'
+import {Spring} from 'react-spring/renderprops'
 
 export default class MainPage extends Component {
     state = {
@@ -113,18 +114,71 @@ export default class MainPage extends Component {
                                     <Options setIndex={this.setIndex} return={this.props.return}/>
                                 </div>
                                 <div className="col-9">
-                                    {this.state.selectedIndex === 1 ? <MainTrans /> : null}
-                                    {this.state.selectedIndex === 2 ? <Attractions addAttraction = {this.addAttraction}  /> : null}
-                                    {this.state.selectedIndex === 3 ? <Transportation /> : null}
-                                    {this.state.selectedIndex === 4 ? <Hotels addHotel = {this.addHotel}  /> : null}
-                                    {this.state.selectedIndex === 5 ? <Summary /> : null}
+                                    <Spring
+                                    from={{opacity: 0}}
+                                    to={{opacity:(this.state.selectedIndex === 1 ? 1 : 0), display:(this.state.selectedIndex===1?'inline-block':'none')}}>
+                                    {props => 
+                                        <div style={props}>
+                                            <MainTrans />
+                                        </div>
+                                    }
+                                    </Spring>
+                                    <Spring
+                                    from={{opacity: 0}}
+                                    to={{opacity:(this.state.selectedIndex === 2 ? 1 : 0), display:(this.state.selectedIndex===2?'inline-block':'none')}}>
+                                    {props => 
+                                        <div style={props}>
+                                            <Attractions addAttraction = {this.addAttraction}  />
+                                        </div>
+                                    }
+                                    </Spring>
+                                    <Spring
+                                    from={{opacity: 0}}
+                                    to={{opacity:(this.state.selectedIndex === 3 ? 1 : 0), display:(this.state.selectedIndex===3?'inline-block':'none')}}>
+                                    {props => 
+                                        <div style={props}>
+                                            <Transportation /> 
+                                        </div>
+                                    }
+                                    </Spring>
+                                    <Spring
+                                    from={{opacity: 0}}
+                                    to={{opacity:(this.state.selectedIndex === 4 ? 1 : 0), display:(this.state.selectedIndex===4?'inline-block':'none')}}>
+                                    {props => 
+                                        <div style={props}>
+                                            <Hotels addHotel = {this.addHotel}  /> 
+                                        </div>
+                                    }
+                                    </Spring>
+                                    <Spring
+                                    from={{opacity: 0}}
+                                    to={{opacity:(this.state.selectedIndex === 5 ? 1 : 0), display:(this.state.selectedIndex===5?'inline-block':'none')}}>
+                                    {props => 
+                                        <div style={props}>
+                                            <Summary /> 
+                                        </div>
+                                    }
+                                    </Spring>
+                                    {/* {this.state.selectedIndex === 2 ? <Attractions addAttraction = {this.addAttraction}  /> : null} */}
+                                    {/* {this.state.selectedIndex === 3 ? <Transportation /> : null} */}
+                                    {/* {this.state.selectedIndex === 4 ? <Hotels addHotel = {this.addHotel}  /> : null} */}
+                                    {/* {this.state.selectedIndex === 5 ? <Summary /> : null} */}
                                 </div>
                             </div>
                         </div>
                         <div className="col-5">
                             { this.state.selectedIndex !== 5 && this.state.selectedIndex !== 3 ? <Map markerList = {this.state.markerList} hotelMarkerList = {this.state.hotelMarkerList} count = {this.state.count} hotelCount = {this.state.hotelCount} removeAttraction = {this.removeAttraction} removeHotel = {this.removeHotel}/>
                             : null }
-                            { this.state.selectedIndex === 5 ? <Itinerary /> : null }
+                            <Spring
+                            from={{opacity: 0}}
+                            to={{opacity:(this.state.selectedIndex === 5 ? 1 : 0), display:(this.state.selectedIndex===5?'inline-block':'none')}}>
+                            {props => 
+                                <div style={props}>
+                                    <Itinerary />
+                                </div>
+                            }
+                            </Spring>
+                            {/* { this.state.selectedIndex === 5 ? <Itinerary /> : null } */}
                         </div>
                     </div>
                 </div>

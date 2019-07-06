@@ -10,13 +10,13 @@ export default class Itinerary extends Component {
                 <h2 id="summary-title">Itinerary</h2>
 
                 <h3 id="subtitle" style={{marginTop:20, textDecoration:'underline'}}>Paris</h3>
-                <img src={Paris} alt="Paris Itinerary" style={{width:'70%', height:'auto'}}/>
+                <img src={Paris} alt="Paris Itinerary" style={{width:'80%', height:'auto'}}/>
 
                 <h3 id="subtitle" style={{marginTop:20, textDecoration:'underline'}}>Marseille</h3>
-                <img src={Marseille} alt="Paris Itinerary" style={{width:'70%', height:'auto'}}/>
+                <img src={Marseille} alt="Paris Itinerary" style={{width:'80%', height:'auto'}}/>
 
                 <h3 id="subtitle" style={{marginTop:20, textDecoration:'underline'}}>Lyon</h3>
-                <img src={Lyon} alt="Paris Itinerary" style={{width:'70%', height:'auto'}}/>
+                <img src={Lyon} alt="Paris Itinerary" style={{width:'80%', height:'auto'}}/>
             </React.Fragment>
         )
     }
