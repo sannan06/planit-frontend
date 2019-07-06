@@ -21,3 +21,7 @@
     padding: 10px;
     width: auto;
 }
+
+.onClickStyling {
+    background-color: gray;
+}
