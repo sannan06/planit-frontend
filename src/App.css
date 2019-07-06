@@ -16,6 +16,8 @@
     font-size: 1.5rem;
 }
 
-#topbar-logo {
-    
+.topbar-logo {
+    height: 7vh;
+    padding: 10px;
+    width: auto;
 }
