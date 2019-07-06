@@ -68,7 +68,11 @@ export default class LandingPage extends Component {
                         </div>
                     </CardContent>
                 </Card>
+<<<<<<< HEAD
+                <button onClick={this.props.goNext}>Continue</button>
+=======
                 <button id="continue-button" style={{width:'10%', marginLeft:'45%', marginTop:'2rem', marginBottom:'3rem', fontFamily:'Varela', fontWeight:700}} type="button" onClick={this.props.goNext} className="btn btn-light">Continue</button>
+>>>>>>> sh
             </React.Fragment>
         )
     }
