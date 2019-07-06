@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import Topbar from './TopBar';
 import Options from './Options';
-import Flights from './Flights';
 import Map from './Map';
 import MainTrans from './MainTrans';
 import Attractions from './Attractions';
 import Transportation from './Transportation';
 import Summary from './Summary';
-import BackIcon from '@material-ui/icons/ArrowBack';
-import { IconButton } from '@material-ui/core';
 import Hotels from './Hotels'
 import Itinerary from './Itinerary'
 
@@ -125,9 +122,9 @@ export default class MainPage extends Component {
                             </div>
                         </div>
                         <div className="col-5">
-                            { this.state.selectedIndex !== 5 ? <Map markerList = {this.state.markerList} hotelMarkerList = {this.state.hotelMarkerList} count = {this.state.count} hotelCount = {this.state.hotelCount} removeAttraction = {this.removeAttraction} removeHotel = {this.removeHotel}/>
-                            : <Itinerary /> }
-                            
+                            { this.state.selectedIndex !== 5 && this.state.selectedIndex !== 3 ? <Map markerList = {this.state.markerList} hotelMarkerList = {this.state.hotelMarkerList} count = {this.state.count} hotelCount = {this.state.hotelCount} removeAttraction = {this.removeAttraction} removeHotel = {this.removeHotel}/>
+                            : null }
+                            { this.state.selectedIndex === 5 ? <Itinerary /> : null }
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import BackIcon from '@material-ui/icons/ArrowBack';
+import ForwardIcon from '@material-ui/icons/ArrowForward';
 import { IconButton } from '@material-ui/core';
 
 export default class Options extends Component {
@@ -24,6 +25,7 @@ export default class Options extends Component {
                 <button id='tra' onMouseDown={e => e.preventDefault()} onClick={() => this.handleClick('tra')} type="button" style={{backgroundColor:`${this.state.selectedButton===3?'#d6d6d6':'white'}`, fontWeight:700, marginTop:'0.75rem'}} className="btn">Transportation</button>
                 <button id='acc' onMouseDown={e => e.preventDefault()} onClick={() => this.handleClick('acc')} type="button" style={{backgroundColor:`${this.state.selectedButton===4?'#d6d6d6':'white'}`, fontWeight:700, marginTop:'0.75rem'}} className="btn">Accomodation</button>
                 <button id='summ' onMouseDown={e => e.preventDefault()} onClick={() => this.handleClick('summ')} type="button" style={{backgroundColor:`${this.state.selectedButton===5?'#d6d6d6':'white'}`, fontWeight:700, marginTop:'0.75rem'}} className="btn">Summary</button>
+                <button style={{fontWeight:700, marginTop:'0.75rem', color:'green'}} className="btn">Marseille <ForwardIcon /></button>
             </div>
         )
     }

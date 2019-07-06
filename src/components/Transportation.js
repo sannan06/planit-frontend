@@ -20,7 +20,7 @@ export default class Transportation extends Component {
                 </div>
                 <h1 id="transportation-title">Transportation for Families</h1>
 
-                <Card id="transportation-card"  style={{width: '100%', margin: '0px auto', borderBottom:'1px solid #e6e6e6'}} elevation={5}>
+                <Card id="transportation-card"  style={{width: '100%', margin: '0px auto', borderBottom:'1px solid #e6e6e6'}} elevation={2}>
                     <div className="row no-gutters">
                         <div className="col-5">
                             <img src={PriusMinivan} alt="Prius Minivan" style={{ width: '100%', height: 'auto' }} />
@@ -37,7 +37,7 @@ export default class Transportation extends Component {
                     </div>
                 </Card>
 
-                <Card id="transportation-card" style={{ width: '100%', margin: '1.5rem auto', borderBottom: '1px solid #e6e6e6' }} elevation={5}>
+                <Card id="transportation-card" style={{ width: '100%', margin: '1.5rem auto', borderBottom: '1px solid #e6e6e6' }} elevation={2}>
                     <div className="row no-gutters">
                         <div className="col-5">
                             <img src={HondaOdyssey} alt="Honda Odyssey" style={{ width: '100%', height: 'auto' }} />
@@ -54,7 +54,7 @@ export default class Transportation extends Component {
                     </div>
                 </Card>
 
-                <Card id="transportation-card" style={{ width: '100%', margin: '1.5rem auto', borderBottom: '1px solid #e6e6e6' }} elevation={5}>
+                <Card id="transportation-card" style={{ width: '100%', margin: '1.5rem auto', borderBottom: '1px solid #e6e6e6' }} elevation={2}>
                     <div className="row no-gutters">
                         <div className="col-5">
                             <img src={ToyotaCorolla} alt="Toyota Corolla" style={{ width: '100%', height: 'auto' }} />

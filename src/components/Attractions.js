@@ -19,7 +19,7 @@ export default class Attractions extends Component {
                 <div className="col-7">
                     <CardContent>
                         <h3 style={{fontFamily:"'Varela', sans-serif"}}>Eiffel Tower</h3>
-                        <p style={{fontFamily:"'Varela', sans-serif"}}>The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, with breathtaking views over the entire city. Perfect for families vistng the city</p> 
+                        <p style={{fontFamily:"'Varela', sans-serif"}}>The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, with breathtaking views over the entire city. Perfect for families vistng the city<br/><b>~3 Hours Required</b></p> 
                         <Button style={{outline:'none'}} size="small" color="primary" className="add-item-button" onClick = {() => this.props.addAttraction(48.8584,  2.2945, "Eiffel Tower")}>
                         Add to itinerary
                         </Button>
@@ -36,7 +36,7 @@ export default class Attractions extends Component {
                 <div className="col-7">
                     <CardContent>
                         <h3 style={{fontFamily:"'Varela', sans-serif"}}>DisneyLand Paris</h3>
-                        <p style={{fontFamily:"'Varela', sans-serif"}}>DisneyLand is an enternainment resort located east of Paris. With a wide plethora of rides and activities, this is a must-see for families visiting Paris!</p> 
+                        <p style={{fontFamily:"'Varela', sans-serif"}}>DisneyLand is an enternainment resort located east of Paris. With a wide plethora of rides and activities, this is a must-see for families visiting Paris!<br/><b>~6 Hours Required</b></p> 
                         <Button style={{outline:'none'}} size="small" color="primary" className="add-item-button" onClick = {() => this.props.addAttraction(48.8672, 2.7838, "Disney Land")}>
                         Add to itinerary
                         </Button>
@@ -54,7 +54,7 @@ export default class Attractions extends Component {
                 <div className="col-7">
                     <CardContent>
                         <h3 style={{fontFamily:"'Varela', sans-serif"}}>Louvre Museum</h3>
-                        <p style={{fontFamily:"'Varela', sans-serif"}}>World-famous art museum, with works of art such as Mona Lisa. Appropriate for families.</p> 
+                        <p style={{fontFamily:"'Varela', sans-serif"}}>World-famous art museum, with works of art such as Mona Lisa. Appropriate for families.<br/><b>~3 Hours Required</b></p> 
                         <Button style={{outline:'none'}} size="small" color="primary" className="add-item-button" onClick = {() => this.props.addAttraction(48.8606, 2.3376, "Louvre")}>
                         Add to itinerary
                         </Button>
@@ -71,7 +71,7 @@ export default class Attractions extends Component {
                         <div className="col-7">
                             <CardContent>
                                 <h3 style={{ fontFamily: "'Varela', sans-serif" }}>Arc De Triomphe</h3>
-                                <p style={{ fontFamily: "'Varela', sans-serif" }}>The Arc de Triomphe is one of the most famous monuments in Paris, France. Definitely a site to visit with family.</p>
+                                <p style={{ fontFamily: "'Varela', sans-serif" }}>The Arc de Triomphe is one of the most famous monuments in Paris, France. Definitely a site to visit with family.<br/><b>~1.5 Hours Required</b></p>
                                 <Button size="small" color="primary" className="add-item-button">
                                     Add to itinerary
                         </Button>

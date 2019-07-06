@@ -19,6 +19,7 @@ export default class Hotels extends Component {
                     <CardContent>
                         <h3 style={{fontFamily:"'Varela', sans-serif"}}>Four Seasons Hotel George V</h3>
                         <p style={{fontFamily:"'Varela', sans-serif"}}>Ornate, high-end hotel offering elegant rooms and suites, plus renown dining, a chic bar and luxe spa.</p> 
+                        <p style={{fontFamily:"'Varela', sans-serif"}}><b>Note: Closest to your selected attractions</b></p> 
                         <Button size="small" color="primary" className="add-item-button" onClick = {() => this.props.addHotel(48.8688636,  2.2984946, "Four Seasons")}>
                         Add to itinerary
                         </Button>

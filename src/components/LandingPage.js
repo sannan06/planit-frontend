@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import justtext from '../images/justtext.png';
 import SearchBar from './SearchBar'
 import Card from '@material-ui/core/Card';
@@ -28,7 +27,7 @@ export default class LandingPage extends Component {
                 <div className="row justify-content-center" style={{paddingTop:'2vh'}}>
                     <p id="byline">Plan your trip quicker, easier, and smarter</p>
                 </div>
-                <Card className="search-card">
+                <Card style={{borderRadius:8}} className="search-card">
                     <CardContent>
                         <h2 id="destinations-title">Pick your destinations</h2>
                         {this.state.destinations.map((item) => 

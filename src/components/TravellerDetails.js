@@ -46,7 +46,7 @@ export default class TravellerDetails extends Component {
                         control={
                         <GreenCheckbox value="checkedA" />
                         }
-                        label="Disabled"
+                        label="Disability"
                         style={{width:'100%'}}
                     />
                     </div>
