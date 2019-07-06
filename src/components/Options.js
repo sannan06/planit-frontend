@@ -8,11 +8,11 @@ export default class Options extends Component {
     render() {
         return (
             <div style={{borderRight:'2px solid #d6d6d6'}}>
-                <Button disableRipple style={{margin: 10, outline:'none', backgroundColor:`${this.state.selectedButton === 1 ? '#d6d6d6' : 'white'}`}} onClick={() => this.handleClick('main')} id="main"> Main Transport </Button>
-                <Button disableRipple style={{margin: 10, outline: 'none', backgroundColor:`${this.state.selectedButton === 2 ? '#d6d6d6' : 'white'}`}} onClick={() => this.handleClick('att')} id='att'> Attractions </Button>
-                <Button disableRipple style={{margin: 10, outline: 'none', backgroundColor:`${this.state.selectedButton === 3 ? '#d6d6d6' : 'white'}`}} onClick={() => this.handleClick('tra')} id='tra'> Transportation </Button>
-                <Button disableRipple style={{margin: 10, outline: 'none', backgroundColor:`${this.state.selectedButton === 4 ? '#d6d6d6' : 'white'}`}} onClick={() => this.handleClick('acc')} id='acc' > Accomodation </Button>
-                <Button disableRipple style={{margin: 10, outline: 'none', backgroundColor:`${this.state.selectedButton === 5 ? '#d6d6d6' : 'white'}`}} onClick={() => this.handleClick('summ')} id='summ' > Summary </Button>
+                <button id='main' onMouseDown={e => e.preventDefault()} onClick={() => this.handleClick('main')} type="button" style={{backgroundColor:`${this.state.selectedButton===1?'#d6d6d6':'white'}`, fontWeight:700}} className="btn">Main Transport</button>
+                <button id='att' onMouseDown={e => e.preventDefault()} onClick={() => this.handleClick('att')} type="button" style={{backgroundColor:`${this.state.selectedButton===2?'#d6d6d6':'white'}`, fontWeight:700, marginTop:'0.75rem'}} className="btn">Attractions</button>
+                <button id='tra' onMouseDown={e => e.preventDefault()} onClick={() => this.handleClick('tra')} type="button" style={{backgroundColor:`${this.state.selectedButton===3?'#d6d6d6':'white'}`, fontWeight:700, marginTop:'0.75rem'}} className="btn">Transportation</button>
+                <button id='acc' onMouseDown={e => e.preventDefault()} onClick={() => this.handleClick('acc')} type="button" style={{backgroundColor:`${this.state.selectedButton===4?'#d6d6d6':'white'}`, fontWeight:700, marginTop:'0.75rem'}} className="btn">Accomodation</button>
+                <button id='summ' onMouseDown={e => e.preventDefault()} onClick={() => this.handleClick('summ')} type="button" style={{backgroundColor:`${this.state.selectedButton===5?'#d6d6d6':'white'}`, fontWeight:700, marginTop:'0.75rem'}} className="btn">Summary</button>
             </div>
         )
     }
