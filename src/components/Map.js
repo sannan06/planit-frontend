@@ -29,29 +29,25 @@ const Marker = ({ text }) =>
     {text}
 </div>;
 
+
 class Map extends Component {
     constructor(props) {
         super(props);
         this.state = {count: 0, markerList: []}
         
     }
-    _removeMarker = (i) => {
-        let oldMarkerList = this.state.markerList;
-        console.log("index is", i);
-        console.log("before", oldMarkerList);
-        oldMarkerList = oldMarkerList.slice(0, i).concat(oldMarkerList.slice(i + 1));
-        console.log("after", oldMarkerList);
-        let k = 1;
-        for(let j = 0; j < oldMarkerList.length; ++j) {
-            oldMarkerList[j].id = k;
-            k++;
 
-        }
+    componentWillReceiveProps(newProps) {
+        console.log(this.props.count, this.props.markerList)
         this.setState( {
-            count: oldMarkerList.length,
-            markerList: oldMarkerList
-
+            
+            count: newProps.count,
+            markerList: newProps.markerList
         })
+    }
+
+    _removeMarker = (i) => {
+        this.props.removeAttraction(i);
     }
     _onClick = ({x, y, lat, lng, event}) => {
         var oldMarkerList = this.state.markerList;
@@ -76,7 +72,7 @@ class Map extends Component {
     }
 
     static defaultProps = {
-        center: [48.859743783016604,  2.3526271242358234],
+        center: [48.8486,  2.5526271242358234],
         zoom: 10
       };
 
@@ -87,9 +83,7 @@ class Map extends Component {
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: '100vh', width: '100%' }}>
-        <Button onClick = { () => {this._onClick({x: 1, y: 1, lat: 48.8584, lng: 2.2945, event: "Eiffel Tower"})}}>Add Eiffel Tower</Button> 
-        <Button onClick = { () => {this._onClick({x: 1, y: 1, lat: 48.8672, lng: 2.7838, event: "Disney Land"})}}>Add Disneyland Paris</Button> 
-        <Button onClick = { () => {this._onClick({x: 1, y: 1, lat: 48.8606, lng: 2.3376, event: "Louvre"})}}>Add Louvre</Button> 
+        
         {this.state.markerList.map((item, i) => (
              <Button key = {i} onClick = { () => {this._removeMarker(i)}}> Remove {item.place} </Button>
          ))}
@@ -97,7 +91,7 @@ class Map extends Component {
          bootstrapURLKeys={ {key: "AIzaSyAQo5ASGzT4OvIocaKUDJwUlLaVtcitHaQ" }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
-          onClick = {this._onClick}
+          //onClick = {this._onClick}
         > 
          {this.state.markerList.map((item, i) => (
             <Marker key = {i} lat = {item.lat} lng = {item.lng} text = {item.id} />

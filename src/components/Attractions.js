@@ -19,7 +19,7 @@ export default class Attractions extends Component {
                     <CardContent>
                         <h3 style={{fontFamily:"'Varela', sans-serif"}}>Eiffel Tower</h3>
                         <p style={{fontFamily:"'Varela', sans-serif"}}>The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, with breathtaking views over the entire city. Perfect for families vistng the city</p> 
-                        <Button size="small" color="primary" className="add-item-button">
+                        <Button size="small" color="primary" className="add-item-button" onClick = {() => this.props.addAttraction(48.8584,  2.2945, "Eiffel Tower")}>
                         Add to itinerary
                         </Button>
                     </CardContent>
@@ -36,9 +36,10 @@ export default class Attractions extends Component {
                     <CardContent>
                         <h3 style={{fontFamily:"'Varela', sans-serif"}}>DisneyLand Paris</h3>
                         <p style={{fontFamily:"'Varela', sans-serif"}}>DisneyLand is an enternainment resort located east of Paris. With a wide plethora of rides and activities, this is a must-see for families visiting Paris!</p> 
-                        <Button size="small" color="primary" className="add-item-button">
+                        <Button size="small" color="primary" className="add-item-button" onClick = {() => this.props.addAttraction(48.8672, 2.7838, "Disney Land")}>
                         Add to itinerary
                         </Button>
+                        
                     </CardContent>
                 </div>
                 </div>
@@ -53,7 +54,7 @@ export default class Attractions extends Component {
                     <CardContent>
                         <h3 style={{fontFamily:"'Varela', sans-serif"}}>Louvre Museum</h3>
                         <p style={{fontFamily:"'Varela', sans-serif"}}>World-famous art museum, with works of art such as Mona Lisa. Appropriate for families.</p> 
-                        <Button size="small" color="primary" className="add-item-button">
+                        <Button size="small" color="primary" className="add-item-button" onClick = {() => this.props.addAttraction(48.8606, 2.3376, "Louvre")}>
                         Add to itinerary
                         </Button>
                     </CardContent>
