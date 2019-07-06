@@ -7,6 +7,7 @@ import MainTrans from './MainTrans';
 import Attractions from './Attractions';
 import BackIcon from '@material-ui/icons/ArrowBack';
 import { IconButton } from '@material-ui/core';
+import Hotels from './Hotels'
 
 
 
@@ -14,7 +15,8 @@ export default class MainPage extends Component {
     state = {
         selectedIndex: 1,
         count: 0, 
-        markerList: []
+        markerList: [],
+        hotelMarkerList: []
     }
 
     addAttraction = (lat, lng, event) => {
@@ -58,6 +60,47 @@ export default class MainPage extends Component {
         })
     }
 
+    addHotel = (lat, lng, event) => {
+        console.log(lat, lng, event)
+        var oldMarkerList = this.state.hotelMarkerList;
+        var existFlag = false;
+
+        if(oldMarkerList.length > 0) { 
+            oldMarkerList.forEach(element => {
+                if(element.lat === lat && element.lng === lng) {
+                    existFlag = true;
+                }
+            });
+        }
+
+        if(!existFlag) {
+            oldMarkerList = oldMarkerList.concat({lat: lat, lng: lng, id: this.state.count + 1, place: event})
+            this.setState( {
+                count: this.state.count + 1,
+                hotelMarkerList: oldMarkerList
+            })
+            console.log(oldMarkerList);
+        }
+    }
+    
+    removeHotel = (i) => {
+        let oldMarkerList = this.state.hotelMarkerList;
+        console.log("index is", i);
+        console.log("before", oldMarkerList);
+        oldMarkerList = oldMarkerList.slice(0, i).concat(oldMarkerList.slice(i + 1));
+        console.log("after", oldMarkerList);
+        let k = 1;
+        for(let j = 0; j < oldMarkerList.length; ++j) {
+            oldMarkerList[j].id = k;
+            k++;
+        }
+        this.setState( {
+            count: oldMarkerList.length,
+            hotelMarkerList: oldMarkerList
+
+        })
+    }
+
     render() {
         
         return (
@@ -83,11 +126,12 @@ export default class MainPage extends Component {
                                 <div className="col-9">
                                     {this.state.selectedIndex === 1 ? <MainTrans /> : null}
                                     {this.state.selectedIndex === 2 ? <Attractions addAttraction = {this.addAttraction}  /> : null}
+                                    {this.state.selectedIndex === 4 ? <Hotels addHotel = {this.addHotel}  /> : null}
                                 </div>
                             </div>
                         </div>
                         <div className="col-5">
-                            <Map markerList = {this.state.markerList} count = {this.state.count} removeAttraction = {this.removeAttraction}/>
+                            <Map markerList = {this.state.markerList} hotelMarkerList = {this.state.hotelMarkerList} count = {this.state.count} removeAttraction = {this.removeAttraction} removeHotel = {this.removeHotel}/>
                         </div>
                     </div>
                 </div>
