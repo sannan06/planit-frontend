@@ -3,12 +3,13 @@ import { Card, CardContent, CardActions, Button } from '@material-ui/core';
 import EiffelTower from '../images/etower.jpg'
 import Disney from '../images/disney.png'
 import Louvre from '../images/louvre.jpg'
+import ArcdeTriomphe from '../images/arc-de-triomphe.jpg'
 
 export default class Attractions extends Component {
     render() {
         return (
             <React.Fragment>
-                <h1 id="attractions-title">Attractions for families</h1>
+                <h1 id="attractions-title">Attractions for Families</h1>
 
                 <Card id="attractions-card" style={{width: '100%', margin: '0px auto', borderBottom:'1px solid #e6e6e6'}} elevation={5}>
                 <div className="row no-gutters">
@@ -18,7 +19,7 @@ export default class Attractions extends Component {
                 <div className="col-7">
                     <CardContent>
                         <h3 style={{fontFamily:"'Varela', sans-serif"}}>Eiffel Tower</h3>
-                        <p style={{fontFamily:"'Varela', sans-serif"}}>The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, with breathtaking views over the entire city. Perfect for families vistng the city</p> 
+                        <p style={{fontFamily:"'Varela', sans-serif"}}>The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, with breathtaking views over the entire city. Perfect for families visting the city</p> 
                         <Button size="small" color="primary" className="add-item-button">
                         Add to itinerary
                         </Button>
@@ -59,6 +60,23 @@ export default class Attractions extends Component {
                     </CardContent>
                 </div>
                 </div>
+                </Card>
+
+                <Card id="attractions-card" style={{ width: '100%', margin: '1.5rem auto', borderBottom: '1px solid #e6e6e6' }} elevation={5}>
+                    <div className="row no-gutters">
+                        <div className="col-5">
+                            <img src={ArcdeTriomphe} alt="Arc-de-Triomphe" style={{ width: '100%', height: 'auto' }} />
+                        </div>
+                        <div className="col-7">
+                            <CardContent>
+                                <h3 style={{ fontFamily: "'Varela', sans-serif" }}>Arc De Triomphe</h3>
+                                <p style={{ fontFamily: "'Varela', sans-serif" }}>The Arc de Triomphe is one of the most famous monuments in Paris, France. Definitely a site to visit with family.</p>
+                                <Button size="small" color="primary" className="add-item-button">
+                                    Add to itinerary
+                        </Button>
+                            </CardContent>
+                        </div>
+                    </div>
                 </Card>
 
             </React.Fragment>

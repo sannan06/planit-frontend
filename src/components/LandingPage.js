@@ -29,7 +29,7 @@ export default class LandingPage extends Component {
                         <SearchBar />
                     </CardContent>
                 </Card>
-                
+                <button onClick={this.props.goNext}>Continue</button>
             </React.Fragment>
         )
     }
