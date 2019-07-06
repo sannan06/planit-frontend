@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import BackIcon from '@material-ui/icons/ArrowBack';
+import { IconButton } from '@material-ui/core';
 
 export default class Options extends Component {
     state = {
@@ -7,6 +9,16 @@ export default class Options extends Component {
     render() {
         return (
             <div style={{borderRight:'2px solid #d6d6d6'}}>
+                <div className="back-button" style={{margin:'0rem 0 0rem 1rem'}}>
+                    <div className="row">
+                        <IconButton
+                        style={{outline: 'none'}}
+                        onClick={this.props.return}>
+                            <BackIcon style={{fontSize:'3rem', color:'green'}}/>
+                        </IconButton>
+                        <h2 id="back-text">Back</h2>
+                    </div>
+                </div>
                 <button id='main' onMouseDown={e => e.preventDefault()} onClick={() => this.handleClick('main')} type="button" style={{backgroundColor:`${this.state.selectedButton===1?'#d6d6d6':'white'}`, fontWeight:700}} className="btn">Main Transport</button>
                 <button id='att' onMouseDown={e => e.preventDefault()} onClick={() => this.handleClick('att')} type="button" style={{backgroundColor:`${this.state.selectedButton===2?'#d6d6d6':'white'}`, fontWeight:700, marginTop:'0.75rem'}} className="btn">Attractions</button>
                 <button id='tra' onMouseDown={e => e.preventDefault()} onClick={() => this.handleClick('tra')} type="button" style={{backgroundColor:`${this.state.selectedButton===3?'#d6d6d6':'white'}`, fontWeight:700, marginTop:'0.75rem'}} className="btn">Transportation</button>

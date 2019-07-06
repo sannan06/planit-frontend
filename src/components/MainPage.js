@@ -9,8 +9,7 @@ import Summary from './Summary';
 import BackIcon from '@material-ui/icons/ArrowBack';
 import { IconButton } from '@material-ui/core';
 import Hotels from './Hotels'
-
-
+import Itinerary from './Itinerary'
 
 export default class MainPage extends Component {
     state = {
@@ -107,22 +106,12 @@ export default class MainPage extends Component {
         return (
             <React.Fragment>
                 <Topbar />
-                <div className="back-button" style={{margin:'0rem 0 0rem 1rem'}}>
-                    <div className="row">
-                        <IconButton
-                        style={{outline: 'none'}}
-                        onClick={this.props.return}>
-                            <BackIcon style={{fontSize:'3rem', color:'green'}}/>
-                        </IconButton>
-                        <h2 id="back-text">Back</h2>
-                    </div>
-                </div>
                 <div className="container-fluid" style={{height: '100vh'}}>
-                    <div className="row">
+                    <div className="row" style={{marginTop:'1rem'}}>
                         <div className="col-7">
                             <div className="row">
                                 <div className="col-3">
-                                    <Options setIndex={this.setIndex}/>
+                                    <Options setIndex={this.setIndex} return={this.props.return}/>
                                 </div>
                                 <div className="col-9">
                                     {this.state.selectedIndex === 1 ? <MainTrans /> : null}
@@ -133,7 +122,8 @@ export default class MainPage extends Component {
                             </div>
                         </div>
                         <div className="col-5">
-                            <Map markerList = {this.state.markerList} hotelMarkerList = {this.state.hotelMarkerList} count = {this.state.count} removeAttraction = {this.removeAttraction} removeHotel = {this.removeHotel}/>
+                            { this.state.selectedIndex !== 5 ? <Map markerList = {this.state.markerList} hotelMarkerList = {this.state.hotelMarkerList} count = {this.state.count} removeAttraction = {this.removeAttraction} removeHotel = {this.removeHotel}/>
+                            : <Itinerary /> }
                         </div>
                     </div>
                 </div>
