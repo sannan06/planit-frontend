@@ -28,12 +28,14 @@ export default class Options extends Component {
                 break;
             case('tra'):
                 this.setState({selectedButton:3});
+                this.props.setIndex(3);
                 break;
             case('acc'):
                 this.setState({selectedButton:4});
                 break;
             case('summ'):
                 this.setState({selectedButton:5});
+                this.props.setIndex(5);
                 break;             
             default:
                 this.setState({selectedButton:null});

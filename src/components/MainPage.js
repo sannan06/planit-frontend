@@ -3,6 +3,7 @@ import Topbar from './TopBar';
 import Options from './Options';
 import MainTrans from './MainTrans';
 import Attractions from './Attractions';
+import Summary from './Summary';
 import BackIcon from '@material-ui/icons/ArrowBack';
 import { IconButton } from '@material-ui/core';
 
@@ -34,6 +35,7 @@ export default class MainPage extends Component {
                                 <div className="col-9">
                                     {this.state.selectedIndex === 1 ? <MainTrans /> : null}
                                     {this.state.selectedIndex === 2 ? <Attractions /> : null}
+                                    {this.state.selectedIndex === 5 ? <Summary /> : null}
                                 </div>
                             </div>
                         </div>
