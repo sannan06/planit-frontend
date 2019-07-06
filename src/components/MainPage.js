@@ -17,9 +17,8 @@ export default class MainPage extends Component {
                 <div className="back-button" style={{margin:'0rem 0 0rem 1rem'}}>
                     <div className="row">
                         <IconButton
-                        style={{
-                            outline: 'none'
-                        }}>
+                        style={{outline: 'none'}}
+                        onClick={this.props.return}>
                             <BackIcon style={{fontSize:'3rem', color:'green'}}/>
                         </IconButton>
                         <h2 id="back-text">Back</h2>

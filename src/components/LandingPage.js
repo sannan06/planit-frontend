@@ -28,6 +28,7 @@ export default class LandingPage extends Component {
                     <p id="byline">Plan your trip quicker, easier, and smarter</p>
                 </div>
                 <SearchBar/>
+                <button onClick={this.props.goNext}>go next!!!</button>
             </React.Fragment>
         )
     }
