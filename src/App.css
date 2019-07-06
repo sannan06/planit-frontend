@@ -4,10 +4,10 @@
 }
 
 #landing-page-component {
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     width: 100vw;
     background-image: linear-gradient(to right, #01c026, #03c890);
-    position: fixed;
 }
 
 #byline {
@@ -65,6 +65,25 @@
 }
 
 .search-card {
+    padding: 10px 10px;
     width: 70vw;
     margin: 0 auto;
+}
+
+#destinations-title {
+    font-size: 1.5rem;
+    font-family: 'Varela', sans-serif;
+    padding-block: 10px;
+}
+
+#summary-title {
+    font-family: 'Varela', sans-serif;
+    font-weight: 700;
+    font-size: 2.3rem;
+}
+
+#subtitle {
+    font-size: 1.5rem;
+    font-family: 'Varela', sans-serif;
+    font-weight: 400;
 }
